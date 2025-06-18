@@ -1,5 +1,6 @@
 # Maintainer: PapyElGringo <adrien@pesler.be>
 pkgname=veshell-git
+pkgver=alpha.1.r135.gd613d93
 pkgrel=1
 pkgdesc="An innovative not-desktop environment for Linux made with modern technologies like Flutter and Rust."
 arch=('x86_64' 'aarch64')
