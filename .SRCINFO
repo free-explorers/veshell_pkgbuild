@@ -1,0 +1,23 @@
+pkgbase = veshell-git
+	pkgdesc = An innovative not-desktop environment for Linux made with modern technologies like Flutter and Rust.
+	pkgver = alpha.1.r135.gd613d93
+	pkgrel = 1
+	url = https://github.com/free-explorers/veshell
+	arch = x86_64
+	arch = aarch64
+	license = GPL3
+	makedepends = cargo
+	makedepends = git
+	depends = fontconfig
+	depends = libseat.so
+	depends = libinput
+	depends = libxcb
+	depends = libxkbcommon
+	depends = mesa
+	depends = pixman
+	depends = systemd
+	depends = wayland
+	source = git+https://github.com/free-explorers/veshell.git
+	sha256sums = SKIP
+
+pkgname = veshell-git
