@@ -8,6 +8,7 @@ pkgbase = veshell-git
 	license = GPL3
 	makedepends = cargo
 	makedepends = git
+	makedepends = clang
 	depends = fontconfig
 	depends = libseat.so
 	depends = libinput

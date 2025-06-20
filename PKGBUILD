@@ -20,6 +20,7 @@ depends=(
 makedepends=(
     'cargo' 
     'git'
+    'clang'
 )
 source=("git+https://github.com/free-explorers/veshell.git")
 sha256sums=('SKIP')
