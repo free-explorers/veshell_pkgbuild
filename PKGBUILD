@@ -51,8 +51,11 @@ package() {
   install -Dm755 extra/assets/veshell-session                  -t "${pkgdir}/usr/bin/"
   install -Dm644 extra/assets/veshell.desktop                  -t "${pkgdir}/usr/share/wayland-sessions/"
   install -Dm644 extra/assets/veshell-portals.conf             -t "${pkgdir}/usr/share/xdg-desktop-portal/"
-  install -Dm644 extra/assets/veshell.service                  -t "${pkgdir}/usr/lib/systemd/user/"
   install -Dm644 extra/assets/veshell-shutdown.target          -t "${pkgdir}/usr/lib/systemd/user/"
+
+  # Install systemd service file
+  sed "s|@bindir@|/usr/bin|" extra/assets/veshell.service.in > build/veshell.service
+  install -Dm644 build/veshell.service "${pkgdir}/usr/lib/systemd/user/veshell.service"
 
   # Install Flutter engine
   install -Dm644 extra/third_party/flutter_engine/release/libflutter_engine.so -t "${pkgdir}/usr/lib/veshell/"
