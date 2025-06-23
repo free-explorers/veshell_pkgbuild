@@ -1,6 +1,6 @@
 pkgbase = veshell-git
 	pkgdesc = An innovative not-desktop environment for Linux made with modern technologies like Flutter and Rust.
-	pkgver = alpha.1.r135.gd613d93
+	pkgver = alpha.1.r136.g85ee62b
 	pkgrel = 1
 	url = https://github.com/free-explorers/veshell
 	arch = x86_64
@@ -18,6 +18,8 @@ pkgbase = veshell-git
 	depends = pixman
 	depends = systemd
 	depends = wayland
+	provides = veshell
+	conflicts = veshell
 	source = git+https://github.com/free-explorers/veshell.git
 	sha256sums = SKIP
 
