@@ -1,6 +1,6 @@
 # Maintainer: PapyElGringo <adrien@pesler.be>
 pkgname=veshell-git
-pkgver=alpha.1.r136.g85ee62b
+pkgver=alpha.1.r138.g04fce58
 pkgrel=1
 pkgdesc="An innovative not-desktop environment for Linux made with modern technologies like Flutter and Rust."
 arch=('x86_64' 'aarch64')
@@ -54,8 +54,8 @@ package() {
   install -Dm644 extra/assets/veshell-shutdown.target          -t "${pkgdir}/usr/lib/systemd/user/"
 
   # Install systemd service file
-  sed "s|@bindir@|/usr/bin|" extra/assets/veshell.service.in > build/veshell.service
-  install -Dm644 build/veshell.service "${pkgdir}/usr/lib/systemd/user/veshell.service"
+  install -Dm644 <(sed "s|@bindir@|/usr/bin|" extra/assets/veshell.service.in) \
+  "${pkgdir}/usr/lib/systemd/user/veshell.service"
 
   # Install Flutter engine
   install -Dm644 extra/third_party/flutter_engine/release/libflutter_engine.so -t "${pkgdir}/usr/lib/veshell/"
